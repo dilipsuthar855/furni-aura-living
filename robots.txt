@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://dilipsuthar855.github.io/furni-aura-living/sitemap.xml
