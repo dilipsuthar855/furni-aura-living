@@ -1,16 +1,20 @@
-const faqItems=document.querySelectorAll(".faq-item");
+const faqItems = document.querySelectorAll(".faq-item");
 
-faqItems.forEach(item=>{
+if (faqItems.length > 0) {
 
-const question=item.querySelector(".faq-question");
+    faqItems.forEach(item => {
 
-question.addEventListener("click",()=>{
+        const question = item.querySelector(".faq-question");
 
-item.classList.toggle("active");
+        question.addEventListener("click", () => {
 
-});
+            item.classList.toggle("active");
 
-});
+        });
+
+    });
+
+}
 const reveals=document.querySelectorAll(".reveal");
 
 function revealSection(){
@@ -81,33 +85,30 @@ document.querySelectorAll("nav a").forEach(link => {
     });
 
 });
-const topBtn=document.getElementById("topBtn");
+const topBtn = document.getElementById("topBtn");
 
-window.addEventListener("scroll",()=>{
+if (topBtn) {
 
-if(window.scrollY>500){
+    window.addEventListener("scroll", () => {
 
-topBtn.style.display="block";
+        if (window.scrollY > 500) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
 
-}else{
+    });
 
-topBtn.style.display="none";
+    topBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
 
 }
-
-});
-
-topBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
 window.addEventListener("load",()=>{
 
 const preloader=document.getElementById("preloader");
