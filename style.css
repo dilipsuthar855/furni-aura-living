@@ -1784,3 +1784,53 @@ transform:translateY(-5px);
 }
 
 }
+/* =========================================
+   PRODUCT DETAILS
+========================================= */
+
+.product-specifications{
+    margin-top:35px;
+    padding-top:30px;
+    border-top:1px solid rgba(212,175,55,.18);
+}
+
+.product-specifications h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    color:#D4AF37;
+    margin-bottom:25px;
+}
+
+.specification-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.specification-item{
+    background:#1b1b1b;
+    border:1px solid rgba(212,175,55,.12);
+    border-radius:10px;
+    padding:16px 18px;
+}
+
+.specification-item span{
+    display:block;
+    color:#999;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.specification-item strong{
+    color:#fff;
+    font-size:15px;
+    font-weight:500;
+}
+
+@media(max-width:700px){
+
+    .specification-grid{
+        grid-template-columns:1fr;
+    }
+
+}
