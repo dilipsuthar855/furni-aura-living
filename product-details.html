@@ -801,8 +801,6 @@ Chat on WhatsApp
 
 </footer>
 
-
-
 <script>
 
 const products = {
@@ -814,7 +812,14 @@ name: "Aura Black Epoxy Smoky Wave",
 image: "images/FAL_DIN_001.jpeg",
 
 description:
-"A dramatic handcrafted epoxy dining table designed to become the centrepiece of your dining space."
+"A dramatic handcrafted epoxy dining table designed to become the centrepiece of your dining space.",
+
+material: "Solid Wood + Premium Epoxy",
+finish: "Premium Epoxy Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -825,7 +830,14 @@ name: "Aura Urban Taper",
 image: "images/FAL_DIN_002.png",
 
 description:
-"A clean modern dining table designed for contemporary homes and everyday family moments."
+"A clean modern dining table designed for contemporary homes and everyday family moments.",
+
+material: "Solid Wood",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -836,7 +848,14 @@ name: "Aura X Classic Modo",
 image: "images/FAL_DIN_003.png",
 
 description:
-"A bold X-frame dining table combining strong construction with timeless modern styling."
+"A bold X-frame dining table combining strong construction with timeless modern styling.",
+
+material: "Solid Wood",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -847,7 +866,14 @@ name: "Aura U Frame Modo",
 image: "images/FAL_DIN_004.png",
 
 description:
-"A refined U-frame dining table with a simple, elegant and timeless character."
+"A refined U-frame dining table with a simple, elegant and timeless character.",
+
+material: "Solid Wood",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -858,7 +884,14 @@ name: "Aura Indigo I Beam",
 image: "images/FAL_DIN_005.png",
 
 description:
-"A statement dining table with a strong I-beam inspired base and elegant proportions."
+"A statement dining table with a strong I-beam inspired base and elegant proportions.",
+
+material: "Solid Wood",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -869,7 +902,14 @@ name: "Aura Bridge Frame",
 image: "images/FAL_DIN_006.png",
 
 description:
-"A modern bridge-frame dining table built around clean lines and family moments."
+"A modern bridge-frame dining table built around clean lines and family moments.",
+
+material: "Solid Wood",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -880,7 +920,14 @@ name: "Aura Signature Dining",
 image: "images/FAL_DIN_007.png",
 
 description:
-"A premium statement dining table created for elegant interiors and memorable family gatherings."
+"A premium statement dining table created for elegant interiors and memorable family gatherings.",
+
+material: "Solid Wood",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -891,7 +938,14 @@ name: "Aura Dining Collection 08",
 image: "images/FAL_DIN_008.JPG",
 
 description:
-"A handcrafted dining design made for elegant family dining spaces."
+"A handcrafted dining design made for elegant family dining spaces.",
+
+material: "Premium Materials",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -902,7 +956,14 @@ name: "Aura Dining Collection 09",
 image: "images/FAL_DIN_009.JPG",
 
 description:
-"A contemporary handcrafted dining table designed for modern homes."
+"A contemporary handcrafted dining table designed for modern homes.",
+
+material: "Premium Materials",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 },
 
@@ -913,7 +974,14 @@ name: "Aura Dining Collection 10",
 image: "images/FAL_DIN_010.JPG",
 
 description:
-"A premium dining design created to bring style and warmth to your home."
+"A premium dining design created to bring style and warmth to your home.",
+
+material: "Premium Materials",
+finish: "Premium Finish",
+size: "Customizable",
+customization: "Available",
+delivery: "Pan India",
+price: "Price on Request"
 
 }
 
@@ -940,6 +1008,36 @@ document.getElementById("productDescription").textContent = product.description;
 document.getElementById("productCode").textContent = productId;
 
 
+/* PRODUCT SPECIFICATIONS */
+
+const specificationItems =
+document.querySelectorAll(".specification-item");
+
+if(specificationItems.length >= 6){
+
+specificationItems[0].querySelector("strong").textContent =
+product.material;
+
+specificationItems[1].querySelector("strong").textContent =
+product.finish;
+
+specificationItems[2].querySelector("strong").textContent =
+product.size;
+
+specificationItems[3].querySelector("strong").textContent =
+product.customization;
+
+specificationItems[4].querySelector("strong").textContent =
+product.delivery;
+
+specificationItems[5].querySelector("strong").textContent =
+product.price;
+
+}
+
+
+/* WHATSAPP */
+
 const whatsappMessage =
 "Hi Furni Aura Living, I'm interested in " +
 product.name +
@@ -950,6 +1048,8 @@ document.getElementById("whatsappButton").href =
 "https://wa.me/919351675893?text=" +
 encodeURIComponent(whatsappMessage);
 
+
+/* PAGE TITLE */
 
 document.title =
 product.name + " | Furni Aura Living";
